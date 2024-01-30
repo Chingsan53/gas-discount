@@ -185,3 +185,42 @@ SPACING SYSTEM (px)
 FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /52 / 62 / 74 / 86 / 98
 */
+
+/* Existing CSS */
+
+/* ... */
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50%; /* Adjust the base font size for smaller screens */
+  }
+
+  .container {
+    padding: 2rem; /* Reduce padding for smaller screens */
+  }
+
+  .header h1 {
+    font-size: 4rem; /* Reduce font size for the header */
+  }
+
+  .menu h2,
+  .pizza h3 {
+    font-size: 2rem; /* Adjust font sizes in menu and pizza list */
+  }
+
+  .pizzas {
+    grid-template-columns: 1fr; /* Stack pizzas in one column */
+  }
+
+  .pizza img {
+    width: 100%; /* Adjust image width */
+    max-width: 200px; /* Set a max-width for images */
+  }
+
+  .btn {
+    padding: 1rem 2rem; /* Adjust button padding */
+  }
+
+  /* Other responsive adjustments as needed */
+}
