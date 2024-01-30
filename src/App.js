@@ -1,154 +1,155 @@
 import "./App.css";
+import React from "react";
 
-const numbers = [
+const numberData = [
   {
     name: "Brett Harding",
-    number: "",
+    phoneNumber: "(931) 357-5569",
     gmail: "BrettHarding381@gmail.com",
   },
   {
     name: "Rick Robertson",
-    number: "",
+    phoneNumber: "",
     gmail: "RickRobertson766@gmail.com",
   },
   {
     name: "Steven Adams",
-    number: "",
+    phoneNumber: "",
     gmail: "StevenAdams964@gmail.com",
   },
   {
     name: "Greg Stevenson",
-    number: "",
+    phoneNumber: "",
     gmail: "GregStevenson454@gmail.com",
   },
   {
     name: "Lara Howarth",
-    number: "",
+    phoneNumber: "",
     gmail: "LaraHowarth011@gmail.com",
   },
   {
     name: "Lewis Stapleton",
-    number: "",
+    phoneNumber: "",
     gmail: "LewisStapleton991@gmail.com",
   },
   {
     name: "Aaron Reed",
-    number: "",
+    phoneNumber: "",
     gmail: "AaronReed960@gmail.com",
   },
   {
     name: "Ann West",
-    number: "",
+    phoneNumber: "",
     gmail: "AnnWest079@gmail.com",
   },
   {
     name: "Jane Moffett",
-    number: "",
+    phoneNumber: "",
     gmail: "JaneMoffett100@gmail.com",
   },
   {
     name: "Gayle Holland",
-    number: "",
+    phoneNumber: "",
     gmail: "GayleHolland593@gmail.com",
   },
   {
     name: "Marcus Milstead",
-    number: "",
+    phoneNumber: "",
     gmail: "MarcusMilstead758@gmail.com",
   },
   {
     name: "Asa Heffernan",
-    number: "",
+    phoneNumber: "",
     gmail: "AsaHeffernan843@gmail.com",
   },
   {
     name: "Angela Travis",
-    number: "",
+    phoneNumber: "",
     gmail: "AngelaTravis898@gmail.com",
   },
   {
     name: "Cynthia Lachance",
-    number: "",
+    phoneNumber: "",
     gmail: "CynthiaLachance667@gmail.com",
   },
   {
     name: "Shantel Thompson",
-    number: "",
+    phoneNumber: "",
     gmail: "ShantelThompson454@gmail.com",
   },
   {
     name: "Bradley Miller",
-    number: "",
+    phoneNumber: "",
     gmail: "BradleyMiller304@gmail.com",
   },
   {
     name: "Steven Sterling",
-    number: "",
+    phoneNumber: "",
     gmail: "StevenSterling931@gmail.com",
   },
   {
     name: "Sherri Walter",
-    number: "",
+    phoneNumber: "",
     gmail: "SherriWalter820@gmail.com",
   },
   {
     name: "Nicholas Slone",
-    number: "",
+    phoneNumber: "",
     gmail: "NicholasSlone030@gmail.com",
   },
   {
     name: "Emanuel Lewis",
-    number: "",
+    phoneNumber: "",
     gmail: "EmanuelLewis377@gmail.com",
   },
   {
     name: "Thomas Roger",
-    number: "",
+    phoneNumber: "",
     gmail: "ThomasRoger531@gmail.com",
   },
   {
     name: "Barbara Duca",
-    number: "",
+    phoneNumber: "",
     gmail: "BarbaraDuca944@gmail.com",
   },
   {
     name: "William Baltz",
-    number: "",
+    phoneNumber: "",
     gmail: "WilliamBaltz495@gmail.com",
   },
   {
     name: "Gregory Robertson",
-    number: "",
+    phoneNumber: "",
     gmail: "GregoryRobertson961@gmail.com",
   },
   {
     name: "Marvin Ware",
-    number: "",
+    phoneNumber: "",
     gmail: "MarvinWare509@gmail.com",
   },
   {
     name: "Mary Saxton",
-    number: "",
+    phoneNumber: "",
     gmail: "MarySaxton956@gmail.com",
   },
   {
     name: "Richard Bronson",
-    number: "",
+    phoneNumber: "",
     gmail: "RichardBronson806@gmail.com",
   },
   {
     name: "Marcella Kerby",
-    number: "",
+    phoneNumber: "",
     gmail: "MarcellaKerby990@gmail.com",
   },
   {
     name: "Nyla Cyrus",
-    number: "",
+    phoneNumber: "",
     gmail: "NylaCyrus132@gmail.com",
   },
   {
     name: "Tammy Tong",
-    number: "",
+    phoneNumber: "",
     gmail: "TammyTong197@gmail.com",
   },
 ];
@@ -156,13 +157,53 @@ const numbers = [
 const App = () => {
   return (
     <div>
-      <div className="header">
-        <h1>Gas Discount</h1>
-      </div>
-      <div className="main">
-        <p>New Phone Number appear here: </p>
-      </div>
+      <Header />
+      <Menu />
+      <Footer />
     </div>
+  );
+};
+
+const Header = () => {
+  return (
+    <header className="header">
+      <h1>Chevron $1 Discount</h1>
+    </header>
+  );
+};
+
+const Menu = () => {
+  const numbers = numberData;
+
+  return (
+    <main className="menu">
+      <h2>Our Phone Numbers to use on Chevron Gas Pump</h2>
+      <ul className="pizzas">
+        {numbers.map((number) => (
+          <Number numberObj={number} key={number.name} />
+        ))}
+      </ul>
+    </main>
+  );
+};
+
+const Number = ({ numberObj }) => {
+  return (
+    <li className="pizza">
+      <div>
+        <h3>{numberObj.name}</h3>
+        <p>{numberObj.phoneNumber}</p>
+        <p>{numberObj.gmail}</p>
+      </div>
+    </li>
+  );
+};
+
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <p>We are updating new phone number daily. Please check back.</p>
+    </footer>
   );
 };
 
