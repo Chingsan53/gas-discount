@@ -167,7 +167,7 @@ const App = () => {
 const Header = () => {
   return (
     <header className="header">
-      <h1>Chevron $1 Discount</h1>
+      <h1>Chevron $1/gallon Discount</h1>
     </header>
   );
 };
@@ -177,7 +177,10 @@ const Menu = () => {
 
   return (
     <main className="menu">
-      <h2>Our Phone Numbers to use on Chevron Gas Pump</h2>
+      <h2>
+        Our Phone Numbers give you $1/gallon up to 25 gallon. You can use it up
+        to 3 times per number
+      </h2>
       <ul className="pizzas">
         {numbers.map((number) => (
           <Number numberObj={number} key={number.name} />
