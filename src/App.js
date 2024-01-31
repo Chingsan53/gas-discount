@@ -16,9 +16,9 @@ const numberData = [
   },
   {
     name: "Steven Adams",
-    phoneNumber: "",
+    phoneNumber: "(704) 495-7404",
     gmail: "StevenAdams964@gmail.com",
-    status: "",
+    status: "3 usage available",
   },
   {
     name: "Greg Stevenson",
@@ -200,6 +200,7 @@ const Number = ({ numberObj }) => {
         <h3>{numberObj.name}</h3>
         <p>{numberObj.phoneNumber}</p>
         <p>{numberObj.gmail}</p>
+        <span>{numberObj.status}</span>
       </div>
     </li>
   );
