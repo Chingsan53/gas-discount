@@ -6,16 +6,19 @@ const numberData = [
     name: "Brett Harding",
     phoneNumber: "(931) 357-5569",
     gmail: "BrettHarding381@gmail.com",
+    status: "3 usage available",
   },
   {
     name: "Rick Robertson",
     phoneNumber: "(920) 791-1869",
     gmail: "RickRobertson766@gmail.com",
+    status: "3 usage available",
   },
   {
     name: "Steven Adams",
     phoneNumber: "",
     gmail: "StevenAdams964@gmail.com",
+    status: "",
   },
   {
     name: "Greg Stevenson",
