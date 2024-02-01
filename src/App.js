@@ -18,7 +18,7 @@ const numberData = [
     name: "Steven Adams",
     phoneNumber: "(704) 495-7404",
     gmail: "StevenAdams964@gmail.com",
-    status: "3 usage available",
+    status: "2 usage available",
   },
   {
     name: "Greg Stevenson",
