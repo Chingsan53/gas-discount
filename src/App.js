@@ -28,8 +28,9 @@ const numberData = [
   },
   {
     name: "Lara Howarth",
-    phoneNumber: "",
+    phoneNumber: "(442) 368-2173",
     gmail: "LaraHowarth011@gmail.com",
+    status: "3 usage available",
   },
   {
     name: "Lewis Stapleton",
