@@ -40,8 +40,9 @@ const numberData = [
   },
   {
     name: "Aaron Reed",
-    phoneNumber: "",
+    phoneNumber: "(763) 288-3473",
     gmail: "AaronReed960@gmail.com",
+    status: "3 usage available",
   },
   {
     name: "Ann West",
