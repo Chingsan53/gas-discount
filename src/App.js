@@ -46,8 +46,9 @@ const numberData = [
   },
   {
     name: "Ann West",
-    phoneNumber: "",
+    phoneNumber: "(630) 237-6391",
     gmail: "AnnWest079@gmail.com",
+    status: "3 usage available"
   },
   {
     name: "Jane Moffett",
