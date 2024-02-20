@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import React from "react";
 
 const numberData = [
@@ -20,18 +20,18 @@ const numberData = [
     gmail: "StevenAdams964@gmail.com",
     status: "2 usage available",
   },
-  // {
-  //   name: "Greg Stevenson",
-  //   phoneNumber: "(731) 991-3368",
-  //   gmail: "GregStevenson454@gmail.com",
-  //   status: "3 usage available",
-  // },
-  // {
-  //   name: "Lara Howarth",
-  //   phoneNumber: "(442) 368-2173",
-  //   gmail: "LaraHowarth011@gmail.com",
-  //   status: "3 usage available",
-  // },
+  {
+    name: "Greg Stevenson",
+    phoneNumber: "(731) 991-3368",
+    gmail: "GregStevenson454@gmail.com",
+    status: "3 usage available",
+  },
+  {
+    name: "Lara Howarth",
+    phoneNumber: "(442) 368-2173",
+    gmail: "LaraHowarth011@gmail.com",
+    status: "3 usage available",
+  },
   // {
   //   name: "Lewis Stapleton",
   //   phoneNumber: "(630) 202-2712",
@@ -164,17 +164,17 @@ const numberData = [
 
 const App = () => {
   return (
-    <div>
-      <Header />
+    <div className="container page-wrapper">
+      {/* <Header /> */}
       <Menu />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
 
 const Header = () => {
   return (
-    <header className="header">
+    <header className="">
       <h1>Gas Discount</h1>
     </header>
   );
@@ -184,16 +184,36 @@ const Menu = () => {
   const numbers = numberData;
 
   return (
-    <main className="menu">
-      {/* <h2>
-        Our Phone Numbers give you $1/gallon up to 25 gallon. You can use it up
-        to 3 times per number
-      </h2> */}
-      <h2>
-        We are updating our app interface to be more user-friendly. Please check
-        back soon. In the mean time please use the remaining below.{" "}
-      </h2>
-      <ul className="pizzas">
+    <main className="page-inner">
+      <Title />
+      <div className="row">
+        <div className="el-wrapper">
+          <div className="box-up">
+            <img className="img" src="./chevron-4.png" alt="" />
+            <div className="img-info">
+              <div className="info-inner">
+                <span className="p-name">Chevron</span>
+                <span className="p-company">Phone number</span>
+              </div>
+              <div className="a-size">
+                Remaining: <span className="size">30</span>
+              </div>
+            </div>
+          </div>
+          <div className="box-down">
+            <div className="h-bg">
+              <div className="h-bg-inner"></div>
+            </div>
+            <a className="cart" href="#">
+              <span className="price">Free</span>
+              <span className="add-to-cart">
+                <span className="txt">Request</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <ul className="contentBox">
         {numbers.map((number) => (
           <Number numberObj={number} key={number.name} />
         ))}
@@ -202,16 +222,29 @@ const Menu = () => {
   );
 };
 
+const Title = () => {
+  return (
+    <div>
+      <h3>
+        Please use these remaining phone numbers for now. We are working
+        updating the app to be more use-friendly
+      </h3>
+    </div>
+  );
+};
+
 const Number = ({ numberObj }) => {
   return (
-    <li className="pizza">
-      <div>
-        <h3>{numberObj.name}</h3>
-        <p>{numberObj.phoneNumber}</p>
-        <p>{numberObj.gmail}</p>
-        <span>{numberObj.status}</span>
-      </div>
-    </li>
+    <div>
+      <li className="cards-container">
+        <div className="card">
+          <h3>{numberObj.name}</h3>
+          <p>{numberObj.phoneNumber}</p>
+          <p>{numberObj.gmail}</p>
+          <span>{numberObj.status}</span>
+        </div>
+      </li>
+    </div>
   );
 };
 
