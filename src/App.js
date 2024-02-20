@@ -172,13 +172,13 @@ const App = () => {
   );
 };
 
-const Header = () => {
-  return (
-    <header className="">
-      <h1>Gas Discount</h1>
-    </header>
-  );
-};
+// const Header = () => {
+//   return (
+//     <header className="">
+//       <h1>Gas Discount</h1>
+//     </header>
+//   );
+// };
 
 const Menu = () => {
   const numbers = numberData;
@@ -248,16 +248,16 @@ const Number = ({ numberObj }) => {
   );
 };
 
-const Footer = () => {
-  return (
-    <footer className="footer">
-      {/* <p>We are updating new phone number daily. Please check back.</p> */}
-      <p>
-        Contact <span>Discord: chinglee</span> if you want a new generated phone
-        number
-      </p>
-    </footer>
-  );
-};
+// const Footer = () => {
+//   return (
+//     <footer className="footer">
+//       {/* <p>We are updating new phone number daily. Please check back.</p> */}
+//       <p>
+//         Contact <span>Discord: chinglee</span> if you want a new generated phone
+//         number
+//       </p>
+//     </footer>
+//   );
+// };
 
 export default App;
