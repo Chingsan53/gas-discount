@@ -226,7 +226,7 @@ const Title = () => {
   return (
     <div>
       <h3>
-        Hello! Please enjoy these remaining phone numbers for now. We are
+        Hello!! Please enjoy these remaining phone numbers for now. We are
         working updating the app to be more use-friendly
       </h3>
     </div>
